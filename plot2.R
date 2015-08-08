@@ -13,7 +13,7 @@ data.sub <- subset(data, data$Date >= "2007-02-01" & data$Date <= "2007-02-02")
 data.sub$DateTime <- strptime(paste(data.sub$Date, data.sub$Time), format="%Y-%m-%d %H:%M:%S")
 
 par(mfrow=c(1,1))
-plot(data.sub$DateTime, data.sub$ Global_active_power, type = "l", col = "black", xlab = "", ylab = " Global Active Power (kilowatts)")
+plot(data.sub$DateTime, data.sub$ Global_active_power, type = "l", col = "black", bg = "white",  xlab = "", ylab = " Global Active Power (kilowatts)")
 
 dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()

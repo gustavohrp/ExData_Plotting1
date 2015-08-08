@@ -13,6 +13,6 @@ data.sub <- subset(data, data$Date >= "2007-02-01" & data$Date <= "2007-02-02")
 data.sub$DateTime <- strptime(paste(data.sub$Date, data.sub$Time), format="%Y-%m-%d %H:%M:%S")
 
 par(mfrow=c(1,1))
-hist(data.sub$Global_active_power, main="Global Active Power", col = "red", xlab = "Global Active Power (kilowatts)", ylab="Frequency" )
+hist(data.sub$Global_active_power, main="Global Active Power", col = "red", bg = "white",  xlab = "Global Active Power (kilowatts)", ylab="Frequency" )
 dev.copy(png, file="plot1.png", height=480, width=480)
 dev.off()

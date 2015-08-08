@@ -13,7 +13,7 @@ data.sub <- subset(data, data$Date >= "2007-02-01" & data$Date <= "2007-02-02")
 data.sub$DateTime <- strptime(paste(data.sub$Date, data.sub$Time), format="%Y-%m-%d %H:%M:%S")
 
 par(mfrow=c(1,1))
-plot(data.sub$DateTime, data.sub$Sub_metering_1, type = "l", col = "black", xlab = "", ylab = "Energy sub metering")
+plot(data.sub$DateTime, data.sub$Sub_metering_1, type = "l", col = "black", bg = "white",  xlab = "", ylab = "Energy sub metering")
 lines(data.sub$DateTime, data.sub$Sub_metering_2, type = "l", col = "red")
 lines(data.sub$DateTime, data.sub$Sub_metering_3, type = "l", col = "blue")
 legend("topright", lwd = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1 ", "Sub_metering_2 ", "Sub_metering_3 "), cex=1.0)
